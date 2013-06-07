@@ -1,0 +1,62 @@
+
+@font-face
+{
+font-family:myfont1;
+src: url('Aller_Lt.ttf')
+
+}
+.title
+{
+	font-family:myfont1;
+	font-size:30px;
+	padding:10px 0px 20px 0px;
+	font-weight:bold;
+}
+
+#percent
+{
+	color:green;
+	font-size:16px;
+	font-weight:bold;
+}
+.dobsel
+{
+	width:90px;
+}
+.span10,.span11
+{
+	padding-top:10px;
+}
+
+#uname
+{
+	background: url('/assets/user_go.png');
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:20px;
+	
+}
+
+#pwd
+{
+        background: url('/assets/key.png');
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:20px;
+}
+
+#phno1
+{
+	background: url('/assets/phone.png');
+	background-repeat:no-repeat;
+	background-position:left;
+	padding-left:20px;
+}
+
+.btn
+{
+	font-size:18px;
+	padding:5px;
+	margin-top:10px;
+}
+

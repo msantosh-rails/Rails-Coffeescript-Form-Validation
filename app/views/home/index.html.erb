@@ -1,0 +1,235 @@
+<div id=header class="container"> <!--Container-->
+<div class="row">
+<div class="span5 title offset4">
+Registration Form
+</div>
+</div>
+
+<div class="row">
+<div class="span"><!--span6-->
+
+<form  method="post" name="myform" onSubmit="return validateForm(this);"  > <!-- Form Begining-->
+
+  <fieldset>
+    <legend>Account Information</legend>
+ <div class="row">
+   <div class="span11"><!-- User Name-->
+    <label class="control-label span2" for="uname">User Name<sup>*</sup></label>
+
+    <div class="controls span8">
+      <input type="text" id="uname"  onBlur="username_validation()"><span  style="color:red;font-size:12px"  id="emsg">&nbsp;</span>
+    </div>
+</div>
+</div>
+<div class="span11">
+ <div class="row">
+   <!-- Password-->
+    <label class="control-label span2" for="pwd">Password<sup>*</sup></label>
+    <div class="controls span8">
+      <input type="password" id="pwd" onBlur="password_validation()"  ><span  style="color:red;font-size:12px" id="pwdemsg">&nbsp;</span>
+    </div>
+</div>
+</div>
+       
+     </fieldset>
+
+  <fieldset>
+    <legend>Profile Information</legend>
+ <div class="row">
+   <div class="span11">
+
+    <label class="control-label span2" for="fname">First Name<sup>*</sup></label>
+    <div class="controls span8">
+      <input type="text" id="fname" onBlur="fname_validation()"><span  style="color:red;font-size:12px" id="fnameemsg">&nbsp;</span>
+    </div>
+</div>
+</div>
+ <div class="row">
+   <div class="span11">
+    <label class="control-label span2" for="lname">Last Name<sup>*</sup></label>
+    <div class="controls span8">
+      <input type="text" id="lname" onBlur="lname_validation()"><span  style="color:red;font-size:12px"   id="lnameemsg">&nbsp;</span>
+    </div>
+</div>
+</div>
+
+ <div class="row">
+   <div class="span10">
+    <label class="control-label span2" for="pic">Profile Pic<br>(jpg/gif/png)<sup>*</sup></label>
+    <div class="controls span7">
+      <input type="file" id="pic" value="" onChange="fileupload_validation()" onBlur="fileupload_validation()"> <span   id="picemsg" style="color:red;font-size:12px">&nbsp;</span>
+    </div>
+</div>
+</div>
+ <div class="row">
+   <div class="span10">
+    <label class="control-label span2" for="gen">Gender<sup>*</sup></label>
+
+    <div class="controls span7">
+      	<label class="radio inline">
+  		<input type="radio" name="gen" checked>Male
+	</label>
+	
+	<label class="radio inline">
+		  <input type="radio" name="gen">Female
+	</label>
+
+    </div>
+</div>    
+</div>   
+ <div class="row">
+   <div class="span10">
+    <label class="control-label span2" for="dob">Date of Birth<sup>*</sup></label>
+    <div class="controls span7">
+     <select class="dobsel" id="daysel"  name=day onChange="dob_validation()" onBlur="dob_validation()">
+<option  selected>Day</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+  <option>6</option>
+  <option>7</option>
+  <option>8</option>
+  <option>9</option>
+  <option>10</option>
+  <option>11</option>
+  <option>12</option>
+  <option>13</option>
+  <option>14</option>
+  <option>15</option>
+  <option>16</option>
+  <option>17</option>
+  <option>18</option>
+  <option>19</option>
+  <option>20</option>
+  <option>21</option>
+  <option>22</option>
+  <option>23</option>
+  <option>24</option>
+  <option>25</option>
+  <option>26</option>
+  <option>27</option>
+  <option>28</option>
+  <option>29</option>
+  <option>30</option>
+  <option>31</option>
+</select>
+<select title="Select month" class="dobsel" id="monthsel"  name="mm" onChange="dob_validation()" onBlur="dob_validation()" >
+			<option  selected>month</option><!-- select tag for month-->
+					<option name="January" >January</option>
+					<option name="February" >February</option>
+					<option name="March" >March</option>
+					<option name="April" >April</option>
+					<option name="May" >May</option>
+					<option name="June" >June</option>
+					<option name="July">July</option>
+					<option name="August" >August</option>
+					<option name="September">September</option>
+					<option name="October" >October</option>
+					<option name="November"">November</option>
+					<option name="December" >December</option>
+					</select>
+<select name=year class="dobsel" id="yearsel" onChange="dob_validation()" onBlur="dob_validation()">
+<option  selected>Year</option>
+  <option>2001</option>
+  <option>2002</option>
+  <option>2003</option>
+  <option>2004</option>
+  <option>2005</option>
+  <option>2006</option>
+  <option>2007</option>
+  <option>2008</option>
+  <option>2009</option>
+  <option>2010</option>
+  <option>2011</option>
+  <option>2012</option>
+  <option>2013</option>
+</select> <span   style="color:red;font-size:12px" id="dobemsg">&nbsp;</span>
+    </div>
+</div>
+</div>
+<div class="row">
+   <div class="span11">
+    <label class="control-label span2" for="hob">Hobbies<sup>*</sup></label>
+
+    <div class="controls span8">
+      	<label class="radio inline">
+  		<input type="radio" name="hob" onBlur="radio_validation()" onChange="radio_validation()">Painting
+	</label>
+	
+	<label class="radio inline">
+		  <input type="radio" name="hob" onBlur="radio_validation()" onChange="radio_validation()">Singing
+	</label>
+
+      	<label class="radio inline">
+  		<input type="radio" name="hob" onBlur="radio_validation()"  onChange="radio_validation()" >Travelling
+	</label>
+	
+	<label class="radio inline">
+		  <input type="radio" name="hob" onBlur="radio_validation()" onChange="radio_validation()">Dancing
+	</label>
+
+      	<label class="radio inline">
+  		<input type="radio" name="hob" onBlur="radio_validation()" onChange="radio_validation()" >Gardening
+	</label>
+	
+	<label class="radio inline">
+		  <input type="radio" name="hob" onBlur="radio_validation()" onChange="radio_validation()">Others
+	</label><span   style="color:red;font-size:12px" id="hobemsg">&nbsp;</span>
+
+    </div>
+</div>       
+</div>
+<div class="row">
+   <div class="span10">
+    <label class="control-label span2" for="countries">Have been to<sup>*</sup></label>
+    <div class="controls span7">
+     <select  id=countries multiple="multiple" onChange="countryselect_validation()" onBlur="countryselect_validation()">
+ 			<option value="Australia">Australia</option>
+			<option value="Belgium">Belgium</option>
+			<option value="Canada">Canada</option>
+			<option value="Denmark">Denmark</option>
+			<option value="Egypt">Egypt</option>
+                        <option value="ind">india</option>
+			<option value="mr">Jamaica</option>
+
+</select><span   style="color:red;font-size:12px" id="countryemsg">&nbsp;</span>
+</div>
+</div>
+</div>
+</fieldset>
+
+<fieldset>
+    <legend>Contact Information</legend>
+<div class="row">
+   <div class="span10">
+    <label class="control-label span2" for="phno">Phone<sup>*</sup></label>
+    <div class="controls span7">
+      <input type="text" id="phno1" placeholder="(e.g + 91 (953)-305-8651)" onBlur="phonenumber_validation()" > <span style="color:red;font-size:12px"  id="phnoemsg">&nbsp;</span>
+    </div>
+</div>
+</div>
+
+<div class="row">
+<div class="span10">
+    <div class="controls" style="padding-left:120px">
+		<button class="btn btn-primary" type="submit">Register</button>
+		<button class="btn btn-danger" type="reset">Reset</button>
+
+
+    </div>
+</div>
+</div>       
+</div>
+     </fieldset>
+</form>
+
+</div>
+</div><!--span6-->
+</div><!--Container-->

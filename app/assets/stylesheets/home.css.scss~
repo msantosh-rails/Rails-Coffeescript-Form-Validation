@@ -1,0 +1,66 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+@font-face
+{
+font-family:myfont1;
+src: url('Aller_Lt.ttf')
+
+}
+.title
+{
+	font-family:myfont1;
+	font-size:30px;
+	padding:10px 0px 20px 0px;
+	font-weight:bold;
+}
+
+#percent
+{
+	color:green;
+	font-size:16px;
+	font-weight:bold;
+}
+.dobsel
+{
+	width:90px;
+}
+.span10,.span11
+{
+	padding-top:10px;
+}
+
+#uname
+{
+	background: url('../img/user_go.png');
+	background-repeat:no-repeat;
+	background-position:left;
+	xpadding-left:20px;
+	
+}
+
+#pwd
+{
+        background: url('../img/key.png');
+	background-repeat:no-repeat;
+	background-position:5px 0px;
+	
+}
+
+#phno1
+{
+	background: url('../img/phone.png');
+	background-repeat:no-repeat;
+	background-position:5px 0px;
+	
+}
+
+.btn
+{
+	font-size:18px;
+	padding:5px;
+	margin-top:10px;
+}
+
